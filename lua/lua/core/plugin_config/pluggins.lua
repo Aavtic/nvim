@@ -49,7 +49,6 @@ return require('packer').startup(function(use)
   use("williamboman/mason-lspconfig.nvim")
   use("neovim/nvim-lspconfig")
 
-  use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
 
   -- Rosepine

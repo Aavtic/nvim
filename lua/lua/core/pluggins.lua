@@ -58,6 +58,7 @@ use 'nvim-lualine/lualine.nvim'
   -- debugging
   use 'nvim-lua/plenary.nvim'
   use 'mfussenegger/nvim-dap'
+  use 'ryanoasis/vim-devicons'
 
   -- Rosepine
   require('packer').startup(function(use)
