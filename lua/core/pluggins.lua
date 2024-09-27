@@ -54,16 +54,8 @@ return require('packer').startup(function(use)
   -- debugging
   use 'nvim-lua/plenary.nvim'
   use 'mfussenegger/nvim-dap'
-  
 
-    use({
-      "folke/tokyonight.nvim",
-      lazy = false,
-      priority = 1000,
-      opts = {},
-    })
-
-    use 'ryanoasis/vim-devicons'
+  use 'ryanoasis/vim-devicons'
 
 
 

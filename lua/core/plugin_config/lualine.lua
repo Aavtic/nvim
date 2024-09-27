@@ -1,7 +1,13 @@
+local function getsystemtime()
+    local currentTime = os.date("*t")
+    return string.format("%s: %02d:%02d:%02d", os.date("%A"), currentTime.hour % 12, currentTime.min, currentTime.sec)
+end
+
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'tokyonight',
+    theme = 'powerline_dark',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -21,7 +27,7 @@ require('lualine').setup {
     lualine_a = {{'filename', path = 1,}},
     lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_x = {getsystemtime, 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },

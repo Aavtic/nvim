@@ -1,24 +1,14 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
-vim.opt.showcmd = true
-vim.opt.laststatus = 2
-vim.opt.autowrite = true
-vim.opt.cursorline = true
-vim.opt.autoread = true
-vim.opt.number = true
-vim.wo.relativenumber = true 
-vim.opt.mouse = 'a'
-vim.opt.ignorecase = true
-vim.opt.hlsearch = false
-vim.opt.wrap = true
-vim.opt.breakindent = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = false
 vim.keymap.set({'n', 'x'}, 'cp', '"+y')
 vim.keymap.set({'n', 'x'}, 'cv', '"+p')
 vim.keymap.set('n', '<leader>a', ':keepjumps normal! ggVG<cr>')
+vim.keymap.set('n', '<leader>t', ':25 sp<cr><c-w>w:term<cr>')
+vim.keymap.set('n', '<leader>r', ':res +10<cr>')
+vim.keymap.set('n', '<leader>d', ':res -10<cr>')
+vim.keymap.set('n', '<leader>q', ':bd!<cr>')
+vim.keymap.set('n', '<leader>n', ':bn<cr>')
+vim.keymap.set('n', '<leader>b', ':bp<cr>')
+
+
 
 
 -- nvim-cmp-configs
