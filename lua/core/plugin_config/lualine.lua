@@ -29,7 +29,7 @@ require('lualine').setup {
     lualine_c = {'filename'},
     lualine_x = {getsystemtime, 'fileformat', 'filetype'},
     lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_z = {'location', 'hostname'}
   },
   inactive_sections = {
     lualine_a = {},
