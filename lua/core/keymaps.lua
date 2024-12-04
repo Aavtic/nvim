@@ -7,14 +7,19 @@ vim.keymap.set('n', '<leader>d', ':res -10<cr>')
 vim.keymap.set('n', '<leader>q', ':bd!<cr>')
 vim.keymap.set('n', '<leader>n', ':bn<cr>')
 vim.keymap.set('n', '<leader>b', ':bp<cr>')
-
-
+vim.keymap.set('n', '<leader>h', '@q')
+vim.keymap.set('n', '<A-j>', ':m .1<CR>==')
+vim.keymap.set('n', '<A-k>', ':m .-2<CR>==')
+vim.keymap.set('v', '<A-j>', ':m \'>+1<cr>gv=gv')
+vim.keymap.set('v', '<A-k>', ':m \'<-2<cr>gv=gv')
 
 
 -- nvim-cmp-configs
 vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
 
 -- use space for tabs and whatnot 
+
+
 
 vim.opt.expandtab = true
 

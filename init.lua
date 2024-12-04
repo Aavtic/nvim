@@ -17,6 +17,12 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = false
 vim.opt.termguicolors = true
 
+-- Rust settings
+
+vim.g.rustc_path = os.getenv("HOME") .. "/.cargo/bin/rustc"
+
+
+
 vim.cmd([[
   highlight Pmenu guibg=black
 	highlight PmenuSel guifg=yellow guibg=black

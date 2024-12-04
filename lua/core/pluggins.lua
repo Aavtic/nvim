@@ -58,6 +58,8 @@ return require('packer').startup(function(use)
   use 'ryanoasis/vim-devicons'
 
 
+  use 'rust-lang/rust.vim'
+
 
 
   -- my plugins here
