@@ -56,10 +56,9 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap'
 
   use 'ryanoasis/vim-devicons'
-
-
   use 'rust-lang/rust.vim'
 
+  use 'NeogitOrg/neogit'
 
 
   -- my plugins here

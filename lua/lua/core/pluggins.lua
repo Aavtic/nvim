@@ -60,6 +60,8 @@ use 'nvim-lualine/lualine.nvim'
   use 'mfussenegger/nvim-dap'
   use 'ryanoasis/vim-devicons'
 
+  use 'NeogitOrg/neogit'
+
   -- Rosepine
   require('packer').startup(function(use)
   use({ 'rose-pine/neovim', as = 'rose-pine' })
