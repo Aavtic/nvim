@@ -22,11 +22,15 @@ vim.opt.termguicolors = true
 vim.g.rustc_path = os.getenv("HOME") .. "/.cargo/bin/rustc"
 
 
-
 vim.cmd([[
   highlight Pmenu guibg=black
 	highlight PmenuSel guifg=yellow guibg=black
 ]])
+
+vim.cmd([[
+    hi Normal ctermbg=none guibg=none
+]])
+
 
 
 vim.opt.guicursor = {
