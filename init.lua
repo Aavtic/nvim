@@ -41,15 +41,16 @@ vim.opt.guicursor = {
 
 -- Set keyword color
 vim.api.nvim_set_hl(0, "@keyword", { fg = "yellow", bold = true })
-vim.api.nvim_set_hl(0, "@variable", { fg = "#03fc5a", bold = true })
-vim.api.nvim_set_hl(0, "@field", { fg = "yellow", bold = true })
+vim.api.nvim_set_hl(0, "@boolean", { fg = "yellow", bold = true })
+vim.api.nvim_set_hl(0, "@variable", { fg = "cyan", bold = true })
 vim.api.nvim_set_hl(0, "@function", { fg = "#a27aff", bold = true })
 vim.api.nvim_set_hl(0, "@function.builtin", { fg = "yellow", bold = true })
+vim.api.nvim_set_hl(0, "@function.macro", { fg = "yellow", bold = true })
 vim.api.nvim_set_hl(0, "@function.macro", { fg = "yellow", bold = true })
 
 vim.api.nvim_set_hl(0, "@namespace", { fg = "red", bold = true }) -- For serde
 vim.api.nvim_set_hl(0, "@type", { fg = "#00FF00", bold = true })    -- For Serialize
-vim.api.nvim_set_hl(0, "@constant.type", { fg = "#00FF00", bold = true })    -- For Serialize
+vim.api.nvim_set_hl(0, "@constant.type", { fg = "yellow", bold = true })    -- For Serialize
 vim.api.nvim_set_hl(0, "@constant", { fg = "yellow", bold = true })    -- For Serialize
 
 
