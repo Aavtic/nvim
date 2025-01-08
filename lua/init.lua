@@ -2,6 +2,8 @@ require("core.keymaps")
 require("core.pluggins")
 require("core.plugin_config")
 require("mason-config")
+require "lspconfig".clangd.setup{}
+
 --vim.cmd[[colorscheme tokyonight]]
 
 -- set _COMPAT_LAYER=RunAsInvoker
