@@ -1,4 +1,5 @@
 require("core.keymaps")
+require("core.macros")
 require("core.pluggins")
 require("core.plugin_config")
 require("mason-config")
