@@ -67,16 +67,20 @@ cmp.setup({
     end, {'i', 's'}),
 
     ['<Tab>'] = cmp.mapping(function(fallback)
-      local col = vim.fn.col('.') - 1
+  local col = vim.fn.col('.') - 1
 
-      if cmp.visible() then
-        cmp.select_next_item(select_opts)
-      elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
-        fallback()
-      else
-        cmp.complete()
-      end
-    end, {'i', 's'}),
+  if cmp.visible() then
+    cmp.select_next_item(select_opts)
+  elseif vim.fn.getcmdtype() == ':' then
+    -- Allow default behavior in command mode
+    fallback()
+  elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+    fallback()
+  else
+    cmp.complete()
+  end
+end, {'i', 's', 'c'}),
+
 
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
