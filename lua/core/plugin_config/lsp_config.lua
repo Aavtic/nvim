@@ -1,12 +1,11 @@
 require("mason").setup()
  
 require("mason-lspconfig").setup({
-    ensure_installed = {"rust_analyzer", "ts_ls", "pylsp"}
+    ensure_installed = {"rust_analyzer", "pylsp"}
 })
 
 local lspconfig = require('lspconfig')
 lspconfig.rust_analyzer.setup({})
-lspconfig.ts_ls.setup({})
 lspconfig.pylsp.setup({})
 
 lspconfig.clangd.setup{

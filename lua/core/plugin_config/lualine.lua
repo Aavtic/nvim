@@ -3,6 +3,10 @@ local function getsystemtime()
     return string.format("%s: %02d:%02d:%02d", os.date("%A"), currentTime.hour % 12, currentTime.min, currentTime.sec)
 end
 
+local function whoami()
+    return "Aadish"
+end
+
 
 require('lualine').setup {
   options = {
@@ -29,7 +33,7 @@ require('lualine').setup {
     lualine_c = {'filename'},
     lualine_x = {getsystemtime, 'fileformat', 'filetype'},
     lualine_y = {'progress'},
-    lualine_z = {'location', 'hostname'}
+    lualine_z = {'location', whoami}
   },
   inactive_sections = {
     lualine_a = {},

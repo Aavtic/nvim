@@ -81,6 +81,27 @@ vim.api.nvim_create_user_command(
 
 
 vim.api.nvim_create_user_command(
+  'HereNow',
+  function()
+    -- Get the directory of the currently open buffer (file)
+    local dir = vim.fn.expand("%:p:h")
+
+    -- Print debug message
+    vim.api.nvim_echo({
+      {"I'm Here Now ", "None"},
+      {dir, "ErrorMsg"}  -- Showing the directory instead of undefined `command`
+    }, false, {})
+
+    -- Change directory
+    if dir ~= "" then
+      vim.cmd('lcd ' .. vim.fn.fnameescape(dir))
+    end
+  end,
+  { nargs = 0 }
+)
+
+
+vim.api.nvim_create_user_command(
   'Trun',
   function(opts)
     local command = opts.args
@@ -104,3 +125,6 @@ require("core.keymaps")
 require("core.pluggins")
 require("core.plugin_config")
 require("mason-config")
+
+vim.opt.wildmenu = true
+vim.opt.wildmode = { "longest:full", "full" }
