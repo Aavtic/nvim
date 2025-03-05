@@ -121,6 +121,15 @@ vim.api.nvim_create_user_command(
 )
 
 
+vim.api.nvim_create_user_command(
+  'CloseAll',
+  function()
+    vim.cmd(':%bd|e#')
+  end,
+  { nargs = 0 } -- This specifies that the command takes exactly 1 argument
+)
+
+
 require("core.keymaps")
 require("core.pluggins")
 require("core.plugin_config")
@@ -128,3 +137,13 @@ require("mason-config")
 
 vim.opt.wildmenu = true
 vim.opt.wildmode = { "longest:full", "full" }
+
+
+-- local cmp = require'cmp'
+-- cmp.setup({
+--   mapping = {
+--     ['<C-Space>'] = cmp.mapping.complete(),
+--   },
+-- })
+
+vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { noremap = true, silent = true })
