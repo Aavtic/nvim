@@ -62,6 +62,8 @@ use 'nvim-lualine/lualine.nvim'
 
   use 'NeogitOrg/neogit'
 
+  use 'mg979/vim-visual-multi'
+
   -- Rosepine
   require('packer').startup(function(use)
   use({ 'rose-pine/neovim', as = 'rose-pine' })

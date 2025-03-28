@@ -64,6 +64,8 @@ return require('packer').startup(function(use)
 
   use 'NeogitOrg/neogit'
 
+  use 'mg979/vim-visual-multi'
+
 
   -- my plugins here
   -- use 'foo1/bar1.nvim'

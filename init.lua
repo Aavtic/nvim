@@ -147,3 +147,18 @@ vim.opt.wildmode = { "longest:full", "full" }
 -- })
 
 vim.keymap.set('i', '<C-Space>', '<C-x><C-o>', { noremap = true, silent = true })
+
+-- disable inline error | warnings
+vim.diagnostic.config({
+  virtual_text = false,  -- Disable inline text
+  signs = true,          -- Keep signs in gutter
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+-- Show Full Message on Demand
+vim.keymap.set('n', '<leader>e', function()
+  vim.diagnostic.open_float(nil, { focusable = true })
+end, { desc = "Show Diagnostics" })
+
