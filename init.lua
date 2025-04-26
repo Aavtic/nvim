@@ -21,6 +21,10 @@ vim.opt.termguicolors = true
 
 vim.g.rustc_path = os.getenv("HOME") .. "/.cargo/bin/rustc"
 
+-- copy settings
+
+vim.g.netrw_copycmd = "cp -r"
+
 
 vim.cmd([[
   highlight Pmenu guibg=black
@@ -161,4 +165,3 @@ vim.diagnostic.config({
 vim.keymap.set('n', '<leader>e', function()
   vim.diagnostic.open_float(nil, { focusable = true })
 end, { desc = "Show Diagnostics" })
-
